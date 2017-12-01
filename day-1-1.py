@@ -2,7 +2,10 @@ test_string = "59945212267958384861888721899525514753529291453572849834636789447
 total = 0
 
 for i in range(0, len(test_string)):
-    if test_string[i] == test_string[i - (len(test_string) / 2)]:
+    if i == len(test_string) - 1:
+        if test_string[i] == test_string[0]:
+            total += eval(test_string[i])
+    elif test_string[i] == test_string[i + 1]:
         total += eval(test_string[i])
 
 print total
